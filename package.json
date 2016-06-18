@@ -1,0 +1,19 @@
+{
+  "name": "test-install",
+  "version": "1.0.0",
+  "description": "SetRace =======",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm install setrace --save"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://zodiase@github.com/Zodiase/setrace.git"
+  },
+  "author": "Xingchen Hong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zodiase/setrace/issues"
+  },
+  "homepage": "https://github.com/Zodiase/setrace#readme"
+}
