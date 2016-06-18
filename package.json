@@ -4,7 +4,7 @@
   "description": "SetRace =======",
   "main": "index.js",
   "scripts": {
-    "test": "npm install setrace --save"
+    "test": "mocha tests.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/Zodiase/setrace/issues"
   },
-  "homepage": "https://github.com/Zodiase/setrace#readme"
+  "homepage": "https://github.com/Zodiase/setrace#readme",
+  "dependencies": {
+    "setrace": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
 }
