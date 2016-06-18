@@ -1,0 +1,27 @@
+{
+  "name": "setrace",
+  "version": "1.0.0",
+  "description": "It's a Barrier for your sets of async routines.",
+  "main": "setrace.js",
+  "scripts": {
+    "lint": "eslint setrace.js",
+    "lint-test": "eslint tests.js",
+    "lint-all": "npm run lint && npm run lint-test",
+    "test": "mocha tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://zodiase@github.com/Zodiase/setrace.git"
+  },
+  "author": "Xingchen Hong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zodiase/setrace/issues"
+  },
+  "homepage": "https://github.com/Zodiase/setrace#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^2.13.0",
+    "mocha": "^2.5.3"
+  }
+}

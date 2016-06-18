@@ -9,7 +9,7 @@
 
 }(typeof window !== 'undefined' ? window : this, function (window, noGlobal) {
   'use strict';
-  
+
   const NOOP = function NOOP () {
     // NO-OP does nothing.
   };
@@ -24,20 +24,22 @@
     this._cb = callback;
     // @type {Function} - The percent report.
     this._pr = percentReport;
-    
+
     this._conditions = {};
     this.set = {};
-    
+
     for (let cond of conditionArray) {
       if (typeof this._conditions[cond] !== 'undefined') {
         continue;
       }
-      
+
       this._conditions[cond] = false;
       this.set[cond] = this._onConditionMet.bind(this, cond);
       this._cd++;
     }
     this._mx = this._cd;
+
+    this._checkCountDown();
   };
   Class_SETRACE.prototype._checkCountDown = function () {
     if (this._cd <= 0) {
@@ -72,13 +74,13 @@
     } else if (typeof percentReport !== 'function') {
       throw new TypeError('Expect `percentReport` to be a function.');
     }
-    
+
     return new Class_SETRACE(conditionArray, callback, percentReport);
   };
-  
+
   if (!noGlobal) {
     window.SETRACE = SETRACE;
   }
-  
+
   return SETRACE;
 }));
