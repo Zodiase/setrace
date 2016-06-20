@@ -1,7 +1,6 @@
-
 (function (global, factory) {
   'use strict';
-  if (typeof module === "object" && typeof module.exports === "object") {
+  if (typeof module === 'object' && typeof module.exports === 'object') {
     module.exports = factory(global, true);
   } else {
     factory(global);
@@ -10,11 +9,11 @@
 }(typeof window !== 'undefined' ? window : this, function (window, noGlobal) {
   'use strict';
 
-  const NOOP = function NOOP () {
+  var NOOP = function NOOP () {
     // NO-OP does nothing.
   };
 
-  const Class_SETRACE = function SETRACE (conditionArray, callback, percentReport) {
+  var CLASS_SETRACE = function SETRACE (conditionArray, callback, percentReport) {
     this._name = Date.now();
     // @type {Number} - The max count.
     this._mx = 0;
@@ -28,25 +27,24 @@
     this._conditions = {};
     this.set = {};
 
-    for (let cond of conditionArray) {
-      if (typeof this._conditions[cond] !== 'undefined') {
-        continue;
+    Array.prototype.forEach.call(conditionArray, function (cond) {
+      if (typeof this._conditions[cond] === 'undefined') {
+        this._conditions[cond] = false;
+        this.set[cond] = this._onConditionMet.bind(this, cond);
+        this._cd++;
       }
+    }, this);
 
-      this._conditions[cond] = false;
-      this.set[cond] = this._onConditionMet.bind(this, cond);
-      this._cd++;
-    }
     this._mx = this._cd;
 
     this._checkCountDown();
   };
-  Class_SETRACE.prototype._checkCountDown = function () {
+  CLASS_SETRACE.prototype._checkCountDown = function () {
     if (this._cd <= 0) {
       this._cb.call();
     }
   };
-  Class_SETRACE.prototype._onConditionMet = function (cond) {
+  CLASS_SETRACE.prototype._onConditionMet = function (cond) {
     if (this._conditions[cond] === false) {
       this._conditions[cond] = true;
       this._cd--;
@@ -62,7 +60,7 @@
    * @param {Function} [percentReport] - Called every time a condition is met.
    * @returns {SETRACE}
    */
-  const SETRACE = function (conditionArray, callback, percentReport) {
+  var SETRACE = function (conditionArray, callback, percentReport) {
     if (!Array.isArray(conditionArray)) {
       throw new TypeError('Expect `conditionArray` to be an array.');
     }
@@ -75,7 +73,7 @@
       throw new TypeError('Expect `percentReport` to be a function.');
     }
 
-    return new Class_SETRACE(conditionArray, callback, percentReport);
+    return new CLASS_SETRACE(conditionArray, callback, percentReport);
   };
 
   if (!noGlobal) {

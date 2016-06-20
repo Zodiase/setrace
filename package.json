@@ -1,9 +1,10 @@
 {
   "name": "setrace",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "It's a Barrier for your sets of async routines.",
   "main": "setrace.js",
   "scripts": {
+    "eslint": "eslint",
     "lint": "eslint setrace.js",
     "lint-test": "eslint tests.js",
     "lint-all": "npm run lint && npm run lint-test",

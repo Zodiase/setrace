@@ -1,34 +1,16 @@
 {
     "env": {
         "browser": true,
-        "es6": true,
         "node": true
     },
     "extends": "eslint:recommended",
     "rules": {
-        "accessor-pairs": "error",
         "array-bracket-spacing": "error",
         "array-callback-return": "error",
-        "arrow-body-style": "error",
-        "arrow-parens": [
-            "error",
-            "always"
-        ],
-        "arrow-spacing": [
-            "error",
-            {
-                "after": true,
-                "before": true
-            }
-        ],
         "block-scoped-var": "error",
         "block-spacing": "error",
-        "brace-style": [
-            "error",
-            "1tbs"
-        ],
-        "callback-return": "error",
-        "camelcase": "off",
+        "brace-style": "error",
+        "camelcase": "error",
         "comma-spacing": [
             "error",
             {
@@ -40,7 +22,6 @@
             "error",
             "last"
         ],
-        "complexity": "error",
         "computed-property-spacing": [
             "error",
             "never"
@@ -58,21 +39,15 @@
         ],
         "eol-last": "error",
         "eqeqeq": "error",
-        "func-names": "off",
         "func-style": [
             "error",
             "expression"
         ],
-        "generator-star-spacing": "error",
-        "global-require": "error",
-        "guard-for-in": "error",
-        "handle-callback-err": "error",
-        "id-blacklist": "error",
-        "id-length": "error",
-        "id-match": "error",
-        "indent": "off",
+        "indent": [
+            "error",
+            2
+        ],
         "init-declarations": "error",
-        "jsx-quotes": "error",
         "key-spacing": "error",
         "keyword-spacing": [
             "error",
@@ -119,7 +94,6 @@
         "no-implicit-globals": "error",
         "no-implied-eval": "error",
         "no-inline-comments": "error",
-        "no-invalid-this": "error",
         "no-iterator": "error",
         "no-label-var": "error",
         "no-labels": "error",
@@ -182,7 +156,6 @@
         "no-useless-constructor": "error",
         "no-useless-escape": "error",
         "no-useless-rename": "error",
-        "no-var": "error",
         "no-void": "error",
         "no-warning-comments": "error",
         "no-whitespace-before-property": "error",
@@ -218,6 +191,14 @@
             "error",
             "never"
         ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
         "space-infix-ops": "error",
         "space-unary-ops": "error",
         "spaced-comment": [
@@ -230,7 +211,6 @@
             "error",
             "never"
         ],
-        "vars-on-top": "error",
         "wrap-iife": "error",
         "wrap-regex": "error",
         "yield-star-spacing": "error",
