@@ -8,6 +8,7 @@
     "lint": "eslint setrace.js",
     "lint-test": "eslint tests.js",
     "lint-all": "npm run lint && npm run lint-test",
+    "prepublish": "tonic-example",
     "test": "mocha tests.js"
   },
   "repository": {
@@ -20,9 +21,11 @@
     "url": "https://github.com/Zodiase/setrace/issues"
   },
   "homepage": "https://github.com/Zodiase/setrace#readme",
+  "tonicExampleFilename": "tonic-example.js",
   "devDependencies": {
     "chai": "^3.5.0",
     "eslint": "^2.13.0",
-    "mocha": "^2.5.3"
+    "mocha": "^2.5.3",
+    "tonic-example": "^0.2.0"
   }
 }
