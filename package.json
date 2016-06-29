@@ -1,6 +1,6 @@
 {
   "name": "setrace",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "It's a Barrier for your sets of async routines.",
   "main": "setrace.js",
   "scripts": {
