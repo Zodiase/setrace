@@ -1,6 +1,8 @@
 SetRace
 =======
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Zodiase/setrace.svg)](https://greenkeeper.io/)
+
 It's a *Barrier* for your sets of async routines.
 
 To run a callback when all conditions are met, it's this simple:
