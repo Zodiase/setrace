@@ -23,9 +23,9 @@
   "homepage": "https://github.com/Zodiase/setrace#readme",
   "tonicExampleFilename": "tonic-example.js",
   "devDependencies": {
-    "chai": "^3.5.0",
-    "eslint": "^2.13.0",
-    "mocha": "^2.5.3",
+    "chai": "^4.1.0",
+    "eslint": "^4.2.0",
+    "mocha": "^3.4.2",
     "tonic-example": "^0.2.0"
   }
 }
